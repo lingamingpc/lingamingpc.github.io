@@ -659,21 +659,19 @@ ol {
 .review-item .review-cover {
 	position: relative;
 	margin-bottom: 30px;
-	height: 345px;
+	height: 400px;
 }
 
 .review-item .review-cover .score {
 	position: absolute;
-	width: 54px;
-	height: 54px;
 	top: -27px;
 	left: 26px;
-	padding-top: 15px;
+	padding: 15px;
 	font-size: 18px;
 	font-weight: 500;
 	color: #fff;
 	text-align: center;
-	border-radius: 50%;
+	border-radius: 10%;
 	z-index: 1;
 }
 
@@ -859,6 +857,8 @@ ol {
   Other Pages
 --------------------
 ====================*/
+
+
 
 .page-info-section {
 	height: 499px;
@@ -1273,7 +1273,7 @@ ol {
 		background-position: right 10% top;
 	}
 	.review-item .review-cover {
-		height: 280px;
+		height: 300px;
 	}
 	.latest-blog .lb-item .lb-thumb {
 		width: 55px;
@@ -1509,4 +1509,6 @@ ol {
 	.page-info-section .pi-content h2 {
 		font-size: 40px;
 	}
+
+	
 }
