@@ -1,0 +1,21 @@
+ div.cusScrollmenu {
+		background-color: #333;
+		overflow: auto;
+		white-space: nowrap;
+	  }
+	  
+	  div.cusScrollmenu a {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 32px;
+		text-decoration: none;
+	  }
+	  
+	  div.cusScrollmenu a:hover {
+		background-color: #777;
+	  }
+
+.margin-top{
+	margin-top: 28px;
+}
