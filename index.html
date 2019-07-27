@@ -14,6 +14,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
 
 	<!-- Stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css/customStyle.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
@@ -60,8 +63,25 @@
 		</div>
 	</header>
 	<!-- Header section end -->
+	<div id="viewport">
+	</div>
 
-
+	<template id="movie-info-template">       
+		<div class="col s12 m4 l2">
+		  <div class="card">
+			<div class="card-image">
+			  <img src="{{this.poster}}">
+			  <span class="card-title">{{this.title}}</span>
+			  <a class="btn-floating halfway-fab waves-effect waves-light red" href="{{this.link}}">
+				  <i class="material-icons">add</i>
+				</a>
+			</div>
+			<div class="card-content">
+			  <p>{{this.casts}}</p>
+			</div>
+		  </div>
+	  </div>
+</template>
 	<!-- Hero section -->
 	<section class="hero-section">
 		<div class="hero-slider owl-carousel">
@@ -438,6 +458,7 @@
 
 
 	<!--====== Javascripts & Jquery ======-->
+	<!-- <script src="Js/app.js" type="module"></script> -->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

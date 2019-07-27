@@ -1,18 +1,21 @@
-const axios= require('axios');
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//Route Apis
+const newsRoute = require('./lin_APIS/routers/lin_news');
+const productRoute =require('./lin_APIS/routers/lin_products');
+const reviewRoute = require('./lin_APIS/routers/lin_reviews');
+const categoryRoute = require('./lin_APIS/routers/category');
 
 
-const productApi = require('./model/linProducts');
-const categoryApi = require('./model/linCategoryAPI');
-const brandApi = require('./model/linBrandAPI');
-const newsApi = require('./model/ linNewsAPI');
-console.log("hello");
-app.use('/products',productApi);
-app.use('/category',categoryApi);
-app.use('/brands',brandApi);
-app.use('/news',newsApi);
+app.use('/news',newsRoute);
+app.use('/products',productRoute);
+app.use('/reviews',reviewRoute);
+app.use('/category',categoryRoute);
 
-app.listen(3001,() =>{
-    console.log("Sever is running on port 3001!");
-});
+app.listen(3000,() =>{
+    console.log("Server is running at port 3000");
+})
+
