@@ -24,9 +24,12 @@ class Controller {
 
         this.productListModel.fetchAllProduct()
             .then((data) => {
-                console.log(data)
-                this.getAllProductData(data)
-                this.displayProductList(data);
+                
+                var list = this.getAllProductData(data)
+                for(ll of list){
+                    console.log(ll.review_title);
+                }
+                this.displayProductList(list);
 
             })
             .then((data) => {
@@ -44,7 +47,7 @@ class Controller {
 
     displayProductList(productObjects) {
         const templates = [];
-        for (let productObj of Object.values(productObjects)) {
+        for (let productObj of productObjects) {
             console.log(productObj.name)
             templates.push(this.productListView.getItemTemplate(productObj));
         }

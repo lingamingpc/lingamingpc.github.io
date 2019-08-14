@@ -267,7 +267,7 @@
 		content="Powered by Slider Revolution 5.4.7.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 	<script type="text/javascript">function setREVStartSize(e) {
 			try {
-			e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+				e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
 				if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
 			} catch (d) { console.log("Failure at Presize of Slider:" + d) }
 		};</script>
@@ -388,184 +388,101 @@
 
 
 
-				<div id="topbar" class="topclass enable_sticky">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3 topnav-left">
-								<div class="topbarmenu clearfix">
-									<!-- Logo Start -->
-									<div id="logo" class="logocase">
-										<a class="brand logofont" href="index.html">
-											<div id="thelogo"><img src="../wp-content/uploads/linFile/linLogo.png"
-													alt="Lin Gaming PC and Parts" class="up-logo" />
-												<img src="../wp-content/uploads/linFile/linLogo.png" class="retina-logo"
-													alt="Lin Gaming PC and Parts" /> </div>
-										</a>
-									</div> <!-- Close #logo -->
-									<!-- close logo span -->
-								</div>
-							</div>
-							<!-- close topnav left -->
-	
-							<div class="topnav-right">
-								<div class="topbarmenu clearfix">
-									<nav id="nav-main" class="clearfix" role="navigation">
-										<div class="menu-menu-container">
-											<ul id="menu-menu" class="sf-menu">
-												<li id="menu-item-142"
-													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-142 active">
-													<a title="Home" href="../index.html">Home</a></li>
-												<li id="menu-item-1114"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1114 sf-dropdown">
-													<a title="shop" href="../shop/index.html" aria-haspopup="false">Shop</a></li>
-												<li id="menu-item-144"
-													class="modo-megamenu columns-4 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-144 sf-dropdown">
-													<a title="review" href="index.html"
-														aria-haspopup="false">Reviews</a></li>
-												<li id="menu-item-26"
-													class="modo-megamenu columns-3 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26 sf-dropdown">
-													<a title="article" href="../article/index.html"
-														aria-haspopup="false">Article</a></li>
-											</ul>
-										</div>
-									</nav>
-								</div>
-							</div>
-							<!-- close topnav-right-->
-						</div>
-						<!-- Close Row -->
-					</div>
-					<!-- Close Container -->
-				</div>
-	
-	
-				<div class="container_mob">
-					<div id="mobile-nav-trigger" class="nav-trigger">
-						<a class="nav-trigger-case mobileclass collapsed" data-toggle="collapse"
-							data-target=".up-nav-collapse">
-							<div class="up-menu-icon"><i class="fa fa-th"></i></div>
-						</a>
-					</div>
-					<div id="up-mobile-nav" class="up-mobile-nav">
-						<div class="nav-inner mobileclass">
-	
-							<div class="up-nav-collapse">
-								<div class="menu-mob-menu-container">
-									<ul id="menu-mob-menu" class="up-mobnav">
-										<li id="menu-item-1129"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-1129 active">
-											<a title="Home" href="index.html"><i class="fa fa fa-home"></i>&nbsp;Home</a>
-										</li>
-										<li id="menu-item-1134"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134">
-											<a title="Shop" href="../shop/index.html"><i
-													class="fa fa fa-address-card-o"></i>&nbsp;Shop</a></li>
-										<li id="menu-item-1136"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1136">
-											<a title="Reviews" href="index.html"><i
-													class="fa fa fa-envelope-open"></i>&nbsp;Reviews</a></li>
-										<li id="menu-item-1135"
-											class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1135">
-											<a title="Article" href="../article/index.html"><i
-													class="fa fa fa-shopping-cart"></i>&nbsp;Article</a></li>
-									</ul>
-								</div>
+			<div id="topbar" class="topclass enable_sticky">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 topnav-left">
+							<div class="topbarmenu clearfix">
+								<!-- Logo Start -->
+								<div id="logo" class="logocase">
+									<a class="brand logofont" href="index.html">
+										<div id="thelogo"><img src="../wp-content/uploads/linFile/linLogo.png"
+												alt="Lin Gaming PC and Parts" class="up-logo" />
+											<img src="../wp-content/uploads/linFile/linLogo.png" class="retina-logo"
+												alt="Lin Gaming PC and Parts" /> </div>
+									</a>
+								</div> <!-- Close #logo -->
+								<!-- close logo span -->
 							</div>
 						</div>
+						<!-- close topnav left -->
+
+						<div class="topnav-right">
+							<div class="topbarmenu clearfix">
+								<nav id="nav-main" class="clearfix" role="navigation">
+									<div class="menu-menu-container">
+										<ul id="menu-menu" class="sf-menu">
+											<li id="menu-item-142"
+												class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-142 active">
+												<a title="Home" href="../index.html">Home</a></li>
+											<li id="menu-item-1114"
+												class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1114 sf-dropdown">
+												<a title="shop" href="../shop/index.html" aria-haspopup="false">Shop</a>
+											</li>
+											<li id="menu-item-144"
+												class="modo-megamenu columns-4 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-144 sf-dropdown">
+												<a title="review" href="index.html" aria-haspopup="false">Reviews</a>
+											</li>
+											<li id="menu-item-26"
+												class="modo-megamenu columns-3 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26 sf-dropdown">
+												<a title="article" href="../article/index.html"
+													aria-haspopup="false">Article</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<!-- close topnav-right-->
+					</div>
+					<!-- Close Row -->
+				</div>
+				<!-- Close Container -->
+			</div>
+
+
+			<div class="container_mob">
+				<div id="mobile-nav-trigger" class="nav-trigger">
+					<a class="nav-trigger-case mobileclass collapsed" data-toggle="collapse"
+						data-target=".up-nav-collapse">
+						<div class="up-menu-icon"><i class="fa fa-th"></i></div>
+					</a>
+				</div>
+				<div id="up-mobile-nav" class="up-mobile-nav">
+					<div class="nav-inner mobileclass">
+
+						<div class="up-nav-collapse">
+							<div class="menu-mob-menu-container">
+								<ul id="menu-mob-menu" class="up-mobnav">
+									<li id="menu-item-1129"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-9 current_page_item menu-item-1129 active">
+										<a title="Home" href="index.html"><i class="fa fa fa-home"></i>&nbsp;Home</a>
+									</li>
+									<li id="menu-item-1134"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1134">
+										<a title="Shop" href="../shop/index.html"><i
+												class="fa fa fa-address-card-o"></i>&nbsp;Shop</a></li>
+									<li id="menu-item-1136"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1136">
+										<a title="Reviews" href="index.html"><i
+												class="fa fa fa-envelope-open"></i>&nbsp;Reviews</a></li>
+									<li id="menu-item-1135"
+										class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1135">
+										<a title="Article" href="../article/index.html"><i
+												class="fa fa fa-shopping-cart"></i>&nbsp;Article</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!-- Close Container Mob -->
-			</header>
+			</div>
+			<!-- Close Container Mob -->
+		</header>
 
 
 		<div class="wrap maincontent dark_version" role="document">
 			<div id="content" class="container">
 				<div class="row">
-					<div class="main main col-lg-9 col-md-8 " role="main">
-						<article
-							class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
-
-							<section class="postmedia">
-								<div class="img_post"><a href="../wp-content/uploads/2014/06/truba.jpg"
-										class="image-popup-no-margins"><img
-											src="../wp-content/uploads/2014/06/truba-1170x724.jpg"
-											title="Triumphant Trumpet" alt="truba" /></a></div>
-							</section>
-							<div class="blogo_bottom_content">
-								<header>
-									<h1 class="entry-title"><a href="../item-detail/index.html">Triumphant
-											Trumpet</a></h1>
-									<div class="post_share">
-
-										<a href="#" class="facebook"
-											data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": ""}'
-											title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
-									</div>
-									<div class="datahead">
-										<span class="postaut"> <span class="postdate">25. Jun</span> | by <a
-												href="../author/Modo/index.html" rel="author">Modo</a>
-									</div>
-								</header>
-
-								<div class="entry-content">
-									<p>A trumpet is a musical instrument. It is the highest register in the brass
-										family. Trumpets are among the oldest musical instruments,[1] dating back to at
-										least 1500 BC. They are played by blowing air through closed lips, producing a
-										&#8220;buzzing&#8221; sound that starts a standing wave vibration in the air
-										column inside the instrument. Since the late 15th century they have primarily
-										been constructed of brass tubing, usually bent twice into a rounded oblong
-										shape. There are several types of trumpet. The most common is a transposing
-										instrument pitched in B♭ with a tubing length of about 148 cm. &hellip; <a
-											href="../item-detail/index.html">Continued</a></p>
-								</div>
-
-							</div> <!-- END bottom-->
-						</article>
-						<article
-							class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
-
-							<section class="postmedia">
-								<div class="img_post"><a href="../wp-content/uploads/2014/06/truba.jpg"
-										class="image-popup-no-margins"><img
-											src="../wp-content/uploads/2014/06/truba-1170x724.jpg"
-											title="Triumphant Trumpet" alt="truba" /></a></div>
-							</section>
-							<div class="blogo_bottom_content">
-								<header>
-									<h1 class="entry-title"><a href="../item-detail/index.html">Triumphant
-											Trumpet</a></h1>
-									<div class="post_share">
-
-										<a href="#" class="facebook"
-											data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": ""}'
-											title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
-									</div>
-									<div class="datahead">
-										<span class="postaut"> <span class="postdate">25. Jun</span> | by <a
-												href="../author/Modo/index.html" rel="author">Modo</a>
-									</div>
-								</header>
-
-								<div class="entry-content">
-									<p>A trumpet is a musical instrument. It is the highest register in the brass
-										family. Trumpets are among the oldest musical instruments,[1] dating back to at
-										least 1500 BC. They are played by blowing air through closed lips, producing a
-										&#8220;buzzing&#8221; sound that starts a standing wave vibration in the air
-										column inside the instrument. Since the late 15th century they have primarily
-										been constructed of brass tubing, usually bent twice into a rounded oblong
-										shape. There are several types of trumpet. The most common is a transposing
-										instrument pitched in B♭ with a tubing length of about 148 cm. &hellip; <a
-											href="../item-detail/index.html">Continued</a></p>
-								</div>
-
-							</div> <!-- END bottom-->
-						</article>
-						
-						<div class="wp-pagenavi"><span aria-current='page' class='page-numbers current'>1</span>
-							<a class='page-numbers' href='page/2/index.html'>2</a>
-							<a class='page-numbers' href='page/3/index.html'>3</a>
-							<a class='page-numbers' href='page/4/index.html'>4</a>
-							<a class="next page-numbers" href="page/2/index.html">»</a></div>
+					<div class="main main col-lg-9 col-md-8 " id="review-list-viewport" role="main">
 
 
 					</div><!-- end main -->
@@ -610,7 +527,7 @@
 									</ul>
 								</div>
 							</section>
-							
+
 						</div><!-- sidebar -->
 					</aside><!-- aside -->
 
@@ -756,6 +673,51 @@
 			<script type='text/javascript' src='../wp-includes/js/wp-embed.min-ver=5.2.2.js'></script>
 			<script type='text/javascript'
 				src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min-ver=5.4.7.js'></script>
+
+			<template id="review-list-template">
+				<article
+					class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+
+					<section class="postmedia">
+						<div class="img_post"><a
+								class="image-popup-no-margins"><img
+									src="{{this.review_image}}" title="Triumphant Trumpet"
+									alt="truba" /></a></div>
+					</section>
+					<div class="blogo_bottom_content">
+						<header>
+							<h1 class="entry-title"><a href="../item-detail/index.html">Triumphant
+									Trumpet</a></h1>
+							<div class="post_share">
+
+								<a href="#" class="facebook"
+									data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": ""}'
+									title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
+							</div>
+							<div class="datahead">
+								<span class="postaut"> <span class="postdate">25. Jun</span> | by <a
+										href="../author/Modo/index.html" rel="author">Modo</a>
+							</div>
+						</header>
+
+						<div class="entry-content">
+							<p>A trumpet is a musical instrument. It is the highest register in the brass
+								family. Trumpets are among the oldest musical instruments,[1] dating back to at
+								least 1500 BC. They are played by blowing air through closed lips, producing a
+								&#8220;buzzing&#8221; sound that starts a standing wave vibration in the air
+								column inside the instrument. Since the late 15th century they have primarily
+								been constructed of brass tubing, usually bent twice into a rounded oblong
+								shape. There are several types of trumpet. The most common is a transposing
+								instrument pitched in B♭ with a tubing length of about 148 cm. &hellip; <a
+									href="../item-detail/index.html">Continued</a></p>
+						</div>
+
+					</div> <!-- END bottom-->
+				</article>
+			</template>
 </body>
+
+<script src="../data-js/reviewApp.js" type="module">
+</script>
 
 </html>
