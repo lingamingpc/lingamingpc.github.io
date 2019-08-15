@@ -429,7 +429,8 @@
 											</li>
 											<li id="menu-item-144"
 												class="modo-megamenu columns-4 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-144 sf-dropdown">
-												<a title="review" href="../review/index.html" aria-haspopup="false">Reviews</a></li>
+												<a title="review" href="../review/index.html"
+													aria-haspopup="false">Reviews</a></li>
 											<li id="menu-item-26"
 												class="modo-megamenu columns-3 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26 sf-dropdown">
 												<a title="article" href="index.html" aria-haspopup="false">Article</a>
@@ -523,28 +524,8 @@
 							<h4>Product Categories</h4><i class="vc_toggle_icon"></i>
 						</div>
 						<div class="vc_toggle_content">
-							<ul class="product-categories">
-								<li class="cat-item cat-item-28"><a
-										href="../product-category/music/albums/index.html">Albums</a>
-								</li>
-								<li class="cat-item cat-item-22"><a
-										href="../product-category/clothing/index.html">Clothing</a></li>
-								<li class="cat-item cat-item-23"><a
-										href="../product-category/clothing/hoodies/index.html">Hoodies</a>
-								</li>
-								<li class="cat-item cat-item-32"><a
-										href="../product-category/music/index.html">Music</a></li>
-								<li class="cat-item cat-item-25"><a
-										href="../product-category/posters/index.html">Posters</a></li>
-								<li class="cat-item cat-item-26"><a
-										href="../product-category/music/singles/index.html">Singles</a>
-								</li>
-								<li class="cat-item cat-item-27"><a
-										href="../product-category/clothing/t-shirts/index.html">T-shirts</a>
-								</li>
-								<li class="cat-item cat-item-42"><a
-										href="../product-category/uncategorized/index.html">Uncategorized</a>
-								</li>
+							<ul class="product-categories"  id="category-item-viewport">
+								
 							</ul>
 						</div>
 					</div>
@@ -596,7 +577,7 @@
 							</article>
 						</div>
 						<div class="blogmasonry">
-								<article
+							<article
 								class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
 								<div class="post-content">
 									<section class="postmedia">
@@ -641,7 +622,7 @@
 							</article>
 						</div>
 						<div class="blogmasonry">
-								<article
+							<article
 								class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
 								<div class="post-content">
 									<section class="postmedia">
@@ -686,7 +667,7 @@
 							</article>
 						</div>
 						<div class="blogmasonry">
-								<article
+							<article
 								class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
 								<div class="post-content">
 									<section class="postmedia">
@@ -882,6 +863,13 @@
 				src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min-ver=5.4.7.js'></script>
 			<script type='text/javascript'
 				src='../wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min-ver=5.4.7.js'></script>
+
+
+			<template id="category-list-template">
+				<li class="cat-item"><a href="{{this.cat_id}}">{{this.cat_name}}</a>
+			</template>
 </body>
+
+<script src="../data-js/articleApp.js" type="module"></script>
 
 </html>

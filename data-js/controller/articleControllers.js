@@ -1,38 +1,28 @@
-import ProductListModel from '/data-js/models/ProductListModel.js';
-import ProductItemModel from '/data-js/models/ProductItemModel.js';
+
 import CategoriesListModel from '/data-js/models/CategoriesListModel.js';
 import CategoryItemModel from '/data-js/models/CategoryItemModel.js';
-
-
-
-import ProductListView from '/data-js/views/ProductListView.js';
 import CategoryListView from '/data-js/views/CategoryListView.js';
 
+import ArticleListModel from '/data-js/models/ArticleListModel.js';
+import ArticleItemModel from '/data-js/models/ArticleItemModel.js';
+import ArticleListView from '/data-js/views/ArticleListView.js';
 
-class Controller {
+
+class ArticleController {
     constructor() {
-        // this.productItemModel = new ProductItemModel();
-        this.productListModel = new ProductListModel();
-        this.productListView = new ProductListView();
         this.categoriesListModel = new CategoriesListModel();
         this.categoryListView = new CategoryListView();
-        this.productObjects = [];
+        
+
+        this.articleListModel = new ArticleListModel();
+        this.articleItemModel = new ArticleItemModel();
+        this.articleListView = new ArticleListView();
+        this.articleObjects = [];
         this.categoryObjects = [];
     }
 
     init() {
 
-        this.productListModel.fetchAllProduct()
-            .then((data) => {
-                
-                this.getAllProductData(data)
-                this.displayProductList(data);
-
-            })
-            .then((data) => {
-                // console.log(data)
-
-            })
 
         this.categoriesListModel.fetchAllCategories()
             .then((data) => {
@@ -100,4 +90,4 @@ class Controller {
     }
 }
 
-export default Controller;
+export default ArticleController;
