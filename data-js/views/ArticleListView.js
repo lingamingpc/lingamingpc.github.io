@@ -11,7 +11,6 @@ class CategoryListView{
                 .replace("{{this.cat_id}}", categoryObj.cat_id)
                 .replace("{{this.cat_name}}", categoryObj.cat_name)
                 
-                
                 .replace("{{para.cat_id}}", categoryObj.cat_id)
                 .replace("{{para.cat_name}}", categoryObj.cat_name)
                 

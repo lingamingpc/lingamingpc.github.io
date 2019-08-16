@@ -1,4 +1,4 @@
-import Controller from '/data-js/controller/controller.js';
+import Controller from './controller/controller.js';
 
 // let controller = require('.controller/controller.js');
 

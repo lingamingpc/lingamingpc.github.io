@@ -4,12 +4,14 @@ class Review extends APIDataModel{
     constructor(
         reviews_id,
         review_title,
+        review_image,   
         review_body,
         reviewr_name,
         cat_id){
             super();
             this.reviews_id = reviews_id;
             this.review_title = review_title;
+            this.review_image = review_image;
             this.review_body = review_body;
             this.reviewr_name = reviewr_name;
             this.cat_id = cat_id;
