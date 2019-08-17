@@ -15,7 +15,7 @@ class ReviewController {
 
         this.reviewListModel.fetchAllReview()
             .then((data) => {
-                
+                console.log(data)
                 this.getAllReviewData(data)
                 this.displayReviewList(data);
             })
@@ -45,7 +45,8 @@ class ReviewController {
                 review.review_title,
                 review.review_body,
                 review.reviewr_name,
-                review.cat_id
+                review.cat_id,
+                review.review_created_at
             )
             this.reviewObjects.push(reviewObj);
         }

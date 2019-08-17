@@ -10,6 +10,9 @@ import CategoryListView from '/data-js/views/CategoryListView.js';
 
 
 class Controller {
+
+    
+
     constructor() {
         // this.productItemModel = new ProductItemModel();
         this.productListModel = new ProductListModel();
@@ -18,6 +21,7 @@ class Controller {
         this.categoryListView = new CategoryListView();
         this.productObjects = [];
         this.categoryObjects = [];
+        this.categoryID = 0;
     }
 
     init() {
@@ -43,10 +47,17 @@ class Controller {
 
 
     displayProductList(productObjects) {
+        this.categoryID = this.getQueryVariable("cat_id");
+        console.log("categoryID"+this.categoryID);
         const templates = [];
         for (let productObj of productObjects) {
-            console.log(productObj.name)
-            templates.push(this.productListView.getItemTemplate(productObj));
+            if(productObj.cat_id == this.categoryID){
+            
+                console.log(productObj.name)
+                templates.push(this.productListView.getItemTemplate(productObj));
+            } else if(this.categoryID == 0){
+                templates.push(this.productListView.getItemTemplate(productObj));
+            }
         }
 
         this.productListView.renderProductList(templates);
@@ -98,6 +109,25 @@ class Controller {
 
         return this.categoryObjects;
     }
+
+    makeSplit(someText) {
+		var temp = someText.replace(/%20/g, " ");
+		
+		return temp;
+	}
+
+    getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+		return (false);
+	}
+
 }
 
 export default Controller;

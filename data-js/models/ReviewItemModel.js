@@ -7,7 +7,8 @@ class Review extends APIDataModel{
         review_image,   
         review_body,
         reviewr_name,
-        cat_id){
+        cat_id,
+        review_created_at){
             super();
             this.reviews_id = reviews_id;
             this.review_title = review_title;
@@ -15,6 +16,7 @@ class Review extends APIDataModel{
             this.review_body = review_body;
             this.reviewr_name = reviewr_name;
             this.cat_id = cat_id;
+            this.review_created_at = review_created_at;
         }
 
         // updateData(data){

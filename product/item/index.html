@@ -729,6 +729,15 @@
 		return (false);
 	}
 
+	function makeSplit(someText) {
+		var temp = someText.replace(/%20/g, " ");
+		
+		return temp;
+	}
+
+
+	console.log(getQueryVariable("image1"));
+
 	document.getElementById("slide-full-image").src = makeSplit(getQueryVariable("image1"));
 	document.getElementById("div-slide-full-image").setAttribute('data-thumb', getQueryVariable("image1"))
 	document.getElementById("a-slide-full-image").href = makeSplit(getQueryVariable("image1"));
@@ -748,11 +757,7 @@
 	document.getElementById("description").innerHTML = makeSplit(getQueryVariable("description"));
 
 
-	function makeSplit(someText) {
-		var temp = someText.replace(/%20/g, " ");
-		
-		return temp;
-	}
+	
 </script>
 
 </html>

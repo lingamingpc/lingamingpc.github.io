@@ -14,6 +14,8 @@ class ReviewListView{
                 .replace("{{this.review_body}}", reviewObj.review_body)
                 .replace("{{this.reviewr_name}}", reviewObj.reviewr_name)
                 .replace("{{this.cat_id}}", reviewObj.cat_id)
+                .replace("{{this.review_created_at}}", reviewObj.review_created_at)
+                
                 
                 .replace("{{para.reviews_id}}", reviewObj.reviews_id)
                 .replace("{{para.review_title}}", reviewObj.review_title)
@@ -21,6 +23,7 @@ class ReviewListView{
                 .replace("{{para.review_body}}", reviewObj.review_body)
                 .replace("{{para.reviewr_name}}", reviewObj.reviewr_name)
                 .replace("{{para.cat_id}}", reviewObj.cat_id)
+                .replace("{{para.review_created_at}}", reviewObj.review_created_at)
            
         return result;
 

@@ -482,54 +482,33 @@
 		<div class="wrap maincontent dark_version" role="document">
 			<div id="content" class="container">
 				<div class="row">
+
+
+					<aside class="col-lg-3 col-md-4" role="complementary">
+						<div class="sidebar">
+							<section
+								class="widget-2 widget woocommerce_product_categories-2 woocommerce widget_product_categories">
+								<div class="widget-inner">
+									<div class="vc_toggle vc_toggle_simple vc_toggle_color_white  vc_toggle_size_md">
+										<div class="vc_toggle_title">
+											<h3>Product Categories</h3><i class="vc_toggle_icon"></i>
+										</div>
+										<div class="vc_toggle_content">
+											<ul class="product-categories" id="category-item-viewport">
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div><!-- sidebar -->
+					</aside><!-- aside -->
+
 					<div class="main main col-lg-9 col-md-8 " id="review-list-viewport" role="main">
 
 
 					</div><!-- end main -->
-					<aside class="col-lg-3 col-md-4" role="complementary">
-						<div class="sidebar">
-							<section class="widget-1 widget-first widget recent-posts-2 widget_recent_entries">
-								<div class="widget-inner">
-									<h3>Recent Posts</h3>
-									<ul>
-										<li>
-											<a href="../triumphant-trumpet/index.html">Triumphant Trumpet</a>
-										</li>
-										<li>
-											<a href="../summer-light/index.html">Summer Light</a>
-										</li>
-										<li>
-											<a href="../vegan-foody-paradise/index.html">Vegan Foodie Paradise</a>
-										</li>
-										<li>
-											<a href="../lemon-vodka-life-philosophy/index.html">Lemon-Vodka Life
-												Philosophy</a>
-										</li>
-										<li>
-											<a href="../indie-music-production/index.html">Indie Music Production</a>
-										</li>
-									</ul>
-								</div>
-							</section>
-							<section class="widget-2 widget recent-comments-2 widget_recent_comments">
-								<div class="widget-inner">
-									<h3>Recent Comments</h3>
-									<ul id="recentcomments">
-										<li class="recentcomments"><span class="comment-author-link">James Koster</span>
-											on <a href="../product/patient-ninja/index.html#comment-17">Patient
-												Ninja</a></li>
-										<li class="recentcomments"><span class="comment-author-link">James Koster</span>
-											on <a href="../product/woo-album-4/index.html#comment-39">Woo Album #4</a>
-										</li>
-										<li class="recentcomments"><span class="comment-author-link">James Koster</span>
-											on <a href="../product/ship-your-idea/index.html#comment-6">Ship Your
-												Idea</a></li>
-									</ul>
-								</div>
-							</section>
-
-						</div><!-- sidebar -->
-					</aside><!-- aside -->
+					
 
 				</div><!-- row-->
 			</div><!-- content -->
@@ -679,16 +658,12 @@
 					class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
 
 					<section class="postmedia">
-						<div class="img_post"><a
-								class="image-popup-no-margins">
-								<img
-									src="{{this.review_image}}" title="Triumphant Trumpet"
-									alt="" /></a></div>
+						<div class="img_post"><a class="image-popup-no-margins">
+								<img src="{{this.review_image}}" title="Triumphant Trumpet" alt="" /></a></div>
 					</section>
 					<div class="blogo_bottom_content">
 						<header>
-							<h1 class="entry-title"><a href="../item-detail/index.html">Triumphant
-									Trumpet</a></h1>
+							<h1 class="entry-title"><a href="../item-detail/index.html">{{this.review_title}}</a></h1>
 							<div class="post_share">
 
 								<a href="#" class="facebook"
@@ -696,14 +671,13 @@
 									title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
 							</div>
 							<div class="datahead">
-								<span class="postaut"> <span class="postdate">25. Jun</span> | by <a
-										href="../author/Modo/index.html" rel="author">Modo</a>
+								<span class="postaut"> <span class="postdate">{{this.review_created_at}}</span> | by <a
+										href="../author/Modo/index.html" rel="author">{{this.reviewr_name}}</a>
 							</div>
 						</header>
 
 						<div class="entry-content">
-							<p>{{this.review_body}} &hellip; <a
-									href="../item-detail/index.html">Continued</a></p>
+							<p>{{this.review_body}} &hellip; <a href="../item-detail/index.html">Continued</a></p>
 						</div>
 
 					</div> <!-- END bottom-->
