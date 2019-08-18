@@ -1,9 +1,9 @@
 
-import CategoriesListModel from '/data-js/models/CategoriesListModel.js';
+import CategoriesListModel from '../../data-js/models/CategoriesListModel.js';
 import CategoryItemModel from '/data-js/models/CategoryItemModel.js';
 import CategoryListView from '/data-js/views/CategoryListView.js';
 
-import ArticleListModel from '/data-js/models/ArticleListModel.js';
+import ArticleListModel from '../../data-js/models/ArticleListModel.js';
 import ArticleItemModel from '/data-js/models/ArticleItemModel.js';
 import ArticleListView from '/data-js/views/ArticleListView.js';
 
@@ -23,6 +23,11 @@ class ArticleController {
 
     init() {
 
+        this.articleListModel.fetchAllArticle()
+        .then((data) =>{
+            this.getAllArticleData(data)
+             this.displayArticleList(data)
+        })
 
         this.categoriesListModel.fetchAllCategories()
             .then((data) => {
@@ -32,48 +37,63 @@ class ArticleController {
     }
 
 
-    displayProductList(productObjects) {
-        const templates = [];
-        for (let productObj of productObjects) {
-            console.log(productObj.name)
-            templates.push(this.productListView.getItemTemplate(productObj));
-        }
+    // displayProductList(productObjects) {
+    //     const templates = [];
+    //     for (let productObj of productObjects) {
+    //         console.log(productObj.name)
+    //         templates.push(this.productListView.getItemTemplate(productObj));
+    //     }
 
-        this.productListView.renderProductList(templates);
-    }
+    //     this.productListView.renderProductList(templates);
+    // }
 
     displayCategoryList(categoryObjects) {
         const templates = [];
         for (let categoryObj of Object.values(categoryObjects)) {
-            console.log(categoryObj.cat_name)
+            // console.log(categoryObj.cat_name)
             templates.push(this.categoryListView.getItemTemplate(categoryObj));
         }
 
         this.categoryListView.renderCategoryList(templates);
     }
 
-
-    getAllProductData(data) {
-        this.categoryObjects = [];
-        for (let product of Object.values(data)) {
-            const productObj = new ProductItemModel(
-                product.lin_product_id,
-                product.name,
-                product.normal_price,
-                product.dicount_price,
-                product.specification,
-                product.discription,
-                product.image1,
-                product.image2,
-                product.image3,
-                product.category_id,
-                product.brand_id,
-                product.cat_name
-            )
-            this.productObjects.push(productObj);
+    displayArticleList(articleObjects) {
+        const templates = [];
+        for (let articleObj of Object.values(articleObjects)) {
+            templates.push(this.articleListView.getItemTemplate(articleObj));
         }
 
-        return this.productObjects;
+        this.articleListView.renderArticleList(templates);
+    }
+
+
+    // getAllProductData(data) {
+    //     this.categoryObjects = [];
+    //     for (let product of Object.values(data)) {
+    //         const productObj = new ProductItemModel(
+    //             product.review_title,
+    //             product.review_image,
+    //             product.review_body
+    //         )
+    //         this.productObjects.push(productObj);
+    //     }
+
+    //     return this.productObjects;
+    // }
+    getAllArticleData(data) {
+        this.articleObjects = [];
+        for (let article of Object.values(data)) {
+            const articleObj = new ArticleItemModel(
+                article.article_id,
+                article.article_title,
+                article.article_image,
+                article.article_description,
+                article.cat_id
+            )
+            this.articleObjects.push(articleObj);
+        }
+
+        return this.articleObjects;
     }
 
     getAllCategoryData(data) {

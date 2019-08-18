@@ -26,6 +26,7 @@ class Article extends APIDataModel{
 
         //     return this;
         // }
+        
 }
 
 export default Article;

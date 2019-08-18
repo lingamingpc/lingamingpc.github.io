@@ -24,7 +24,7 @@ class CategoryListView{
     renderCategoryList(templates){
         this.sviewport.innerHTML = "";
         for(let template of templates){
-            console.log(template)
+            // console.log("this"+template)
             this.sviewport.innerHTML += template;
         }
     }
