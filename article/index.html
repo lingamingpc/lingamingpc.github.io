@@ -12,7 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" type="image/x-icon" href="../wp-content/uploads/2014/06/MODO-logo-favicon-black.png" />
 
-	<title>Blog Masonry &#8211; MODO</title>
+	<title>Articles</title>
 	<link rel='dns-prefetch' href='http://fonts.googleapis.com' />
 	<link rel='dns-prefetch' href='http://s.w.org' />
 	<link rel="alternate" type="application/rss+xml" title="MODO &raquo; Feed" href="../feed/index.rss" />
@@ -283,12 +283,16 @@
 			font-size: 32px;
 		}
 
-		/* .blogmasonry{
+		.blogmasonry {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: 3;
-			
-		} */
+			flex-wrap: wrap;
+			height: 100vh;
+		}
+
+		.box {
+			width: 400px;
+		}
 
 		h1 {
 			font-family: Lato;
@@ -528,6 +532,7 @@
 						</div><!-- sidebar -->
 					</aside><!-- aside -->
 
+
 					<div class="main main col-lg-9 col-md-8 " id="article-item-viewport" role="main">
 
 
@@ -683,7 +688,6 @@
 				src='../wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min-ver=5.4.7.js'></script>
 
 			<template id="article-list-template">
-
 				<article
 					class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
 
@@ -701,13 +705,13 @@
 									title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
 							</div>
 							<div class="datahead">
-								<span class="postaut"> <span class="postdate">{{this.article_created_at}}</span>
+								<span class="postaut"> <span class="postdate">{{this.article_created_at}}</span> | by <a
+										href="../author/Modo/index.html" rel="author">{{this.article_name}}</a>
 							</div>
 						</header>
 
 						<div class="entry-content">
-							<p>{{this.article_description}} &hellip; <a href="../item-detail/index.html">Continued</a>
-							</p>
+							<p>{{this.article_description}} &hellip; <a href="../item-detail/index.html">Continued</a></p>
 						</div>
 
 					</div> <!-- END bottom-->
