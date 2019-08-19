@@ -15,6 +15,7 @@ class Article extends APIDataModel{
             this.article_description = article_description;
             this.article_created_at = article_created_at;
             this.cat_id = cat_id;
+            console.log(this.article_created_at);
         }
 
         // updateData(data){

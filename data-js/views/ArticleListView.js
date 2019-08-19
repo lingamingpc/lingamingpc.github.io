@@ -17,11 +17,7 @@ class ArticleListView{
                 .replace("{{this.cat_id}}",reviewObj.cat_id)
 
                 .replace("{{para.cat_id}}", reviewObj.reveiw_id)
-                .replace("{{para.cat_name}}", reviewObj.review_title)
-                
-
-                console.log(result);
-
+                .replace("{{para.cat_name}}", reviewObj.review_title)   
         return result;
 
     }
@@ -39,7 +35,6 @@ class ArticleListView{
     renderArticleList(templates){
         this.sviewport.innerHTML = "";
         for(let template of templates){
-            console.log(template);
             this.sviewport.innerHTML += template;
         }
     }
