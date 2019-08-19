@@ -37,16 +37,6 @@ class ArticleController {
     }
 
 
-    // displayProductList(productObjects) {
-    //     const templates = [];
-    //     for (let productObj of productObjects) {
-    //         console.log(productObj.name)
-    //         templates.push(this.productListView.getItemTemplate(productObj));
-    //     }
-
-    //     this.productListView.renderProductList(templates);
-    // }
-
     displayCategoryList(categoryObjects) {
         const templates = [];
         for (let categoryObj of Object.values(categoryObjects)) {
@@ -58,28 +48,23 @@ class ArticleController {
     }
 
     displayArticleList(articleObjects) {
+        this.categoryID = this.getQueryVariable("cat_id");
+        console.log("categoryID "+this.categoryID);
         const templates = [];
         for (let articleObj of Object.values(articleObjects)) {
-            templates.push(this.articleListView.getItemTemplate(articleObj));
+            if(articleObj.cat_id == this.categoryID){
+                console.log(productObj.name)
+                templates.push(this.articleListView.getItemTemplate(articleObj));
+            } else if(this.categoryID == 0){
+                templates.push(this.articleListView.getItemTemplate(articleObj));
+            }
+            
         }
 
         this.articleListView.renderArticleList(templates);
     }
 
 
-    // getAllProductData(data) {
-    //     this.categoryObjects = [];
-    //     for (let product of Object.values(data)) {
-    //         const productObj = new ProductItemModel(
-    //             product.review_title,
-    //             product.review_image,
-    //             product.review_body
-    //         )
-    //         this.productObjects.push(productObj);
-    //     }
-
-    //     return this.productObjects;
-    // }
     getAllArticleData(data) {
         this.articleObjects = [];
         for (let article of Object.values(data)) {
@@ -88,6 +73,7 @@ class ArticleController {
                 article.article_title,
                 article.article_image,
                 article.article_description,
+                article.article_created_at,
                 article.cat_id
             )
             this.articleObjects.push(articleObj);
@@ -108,6 +94,24 @@ class ArticleController {
 
         return this.categoryObjects;
     }
+
+    makeSplit(someText) {
+		var temp = someText.replace(/%20/g, " ");
+		
+		return temp;
+	}
+
+    getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split("=");
+			if (pair[0] == variable) {
+				return pair[1];
+			}
+		}
+		return (false);
+	}
 }
 
 export default ArticleController;

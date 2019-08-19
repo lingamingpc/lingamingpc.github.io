@@ -6,12 +6,14 @@ class Article extends APIDataModel{
         article_title,
         article_image,
         article_description,
+        article_created_at,
         cat_id){
             super();
             this.article_id = article_id;
             this.article_title = article_title;
             this.article_image = article_image;
             this.article_description = article_description;
+            this.article_created_at = article_created_at;
             this.cat_id = cat_id;
         }
 

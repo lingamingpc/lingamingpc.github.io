@@ -282,6 +282,7 @@
 			font-style: normal;
 			font-size: 32px;
 		}
+
 		/* .blogmasonry{
 			display: flex;
 			flex-direction: row;
@@ -494,7 +495,7 @@
 
 
 		<div class="wrap maincontent dark_version" role="document">
-			<script>
+			<!-- <script>
 				jQuery(document).ready(function ($) {
 					// or with jQuery
 					var $container = $('.js-masonry');
@@ -503,35 +504,74 @@
 						$container.masonry();
 					});
 				});
-			</script>
-            
-            <div id="content" class="container">
-				<div class="row">
-                    <aside class="col-lg-3 col-md-4" role="complementary">
-						<div class="sidebar">
-							<section
-								class="widget-2 widget woocommerce_product_categories-2 woocommerce widget_product_categories">
-								<div class="widget-inner">
-									<div class="vc_toggle vc_toggle_simple vc_toggle_color_white  vc_toggle_size_md">
-										<div class="vc_toggle_title">
-											<h3>Product Categories</h3><i class="vc_toggle_icon"></i>
-										</div>
-										<div class="vc_toggle_content">
-											<ul class="product-categories" id="category-item-viewport">
+			</script> -->
 
-											</ul>
+			<!-- 
+			<div id="content" class="container">
+				<div class="row">
+					<div class="vc_row wpb_row vc_row-fluid vc_custom_1403776717247">
+						<div class="vc_container">
+							<div class="wpb_column vc_column_container vc_col-sm-12">
+								<div class="vc_column-inner ">
+									<div class="wpb_wrapper">
+										<div
+											class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_left-to-right left-to-right">
+											<div class="wpb_wrapper">
+												<h3 style="text-align: left;">Article</h3>
+
+											</div>
 										</div>
 									</div>
 								</div>
-							</section>
-						</div><!-- sidebar -->
-					</aside><!-- aside -->
+							</div>
+						</div>
+					</div>
 
-					<div class="main main col-lg-9 col-md-8 " id="article-item-viewport" role="main">
+					<div class="vc_toggle vc_toggle_simple vc_toggle_color_white  vc_toggle_size_md">
+						<div class="vc_toggle_title">
+							<h4>Product Categories</h4><i class="vc_toggle_icon"></i>
+						</div>
+						<div class="vc_toggle_content" id="category-item-viewport">
+							<ul class="product-categories">
 
+							</ul>
+						</div>
+					</div>
 
-					</div><!-- end main -->
-					
+					<div id="article-item-viewport" class="container js-masonry" data-masonry-options='{ "itemSelector": ".blogmasonry" }'>
+						
+
+					</div>
+				</div>
+			</div>content -->
+			<div id="content" class="container">
+
+				<div class="vc_row wpb_row vc_row-fluid vc_custom_1403776717247">
+					<div class="vc_container">
+						<div class="wpb_column vc_column_container vc_col-sm-12">
+							<div class="vc_column-inner ">
+								<div class="wpb_wrapper">
+									<div
+										class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_left-to-right left-to-right">
+										<div class="wpb_wrapper">
+											<h3 style="text-align: left;">BLOG MASONRY</h3>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="">
+					<div id="article-item-viewport" class="row js-masonry">
+						
+
+					</div><!-- end container -->
+					<div class="wp-pagenavi"><span aria-current='page' class='page-numbers current'>1</span>
+						<a class='page-numbers' href='page/2/index.html'>2</a>
+						<a class="next page-numbers" href="page/2/index.html">»</a></div>
+
 
 				</div><!-- row-->
 			</div><!-- content -->
@@ -682,39 +722,113 @@
 				src='../wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min-ver=5.4.7.js'></script>
 
 			<template id="article-list-template">
-					
-                    <article
-					class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+				<div class="blogmasonry col-sm">
+					<article
+						class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+						<div class="post-content">
+							<section class="postmedia">
+								<div class="img_post"><a href="../wp-content/uploads/2014/06/truba.jpg"
+										class="image-popup-no-margins"><img src="{{this.article_image}}"
+											title="Triumphant Trumpet" alt="truba" /></a></div>
+							</section>
+							<div class="data_wrap">
+								<header>
+									<a href="../item-detail/index.html">
+										<h5 class="entry-title">{{this.article_title}}</h5>
+									</a>
+									<div class="datahead">
+										<span class="postaut">
+											by <strong rel="author">Modo</strong> |
+										</span>
+									</div>
+								</header>
 
-					<section class="postmedia">
-						<div class="img_post"><a class="image-popup-no-margins">
-								<img src="{{this.article_image}}" title="Triumphant Trumpet" alt="" /></a></div>
-					</section>
-					<div class="blogo_bottom_content">
-						<header>
-							<h1 class="entry-title"><a href="../item-detail/index.html">{{this.article_title}}</a></h1>
-							<div class="post_share">
+								<div class="entry-content">{{this.article_description}}
+									<a href="../item-detail/index.html">Continued
+									</a> </div>
 
-								<a href="#" class="facebook"
-									data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": ""}'
-									title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
 							</div>
-							<div class="datahead">
-								<span class="postaut"> <span class="postdate">{{this.article_created_at}}</span>
-							</div>
-						</header>
+							<div class="post_down">
+								<div class="post_share">
 
-						<div class="entry-content">
-							<p>{{this.article_description}} &hellip; <a href="../item-detail/index.html">Continued</a></p>
+									<a href="#" class="facebook"
+										data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": "'
+										title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
+
+
+								</div>
+
+								<span class="postdate">25. Jun</span>
+							</div>
 						</div>
+					</article>
+				</div>
 
-					</div> <!-- END bottom-->
-				</article>
+				<!-- <div class="blogmasonry">
+					<article
+						class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+						<div class="post-content">
+							<section class="postmedia">
+								<div class="img_post"><a href="../wp-content/uploads/2014/06/truba.jpg"
+										class="image-popup-no-margins"><img
+											src="../wp-content/uploads/2014/06/truba-390x200.jpg"
+											title="Triumphant Trumpet" alt="truba" /></a></div>
+							</section>
+							<div class="data_wrap">
+								<header>
+									<a href="../triumphant-trumpet/index.html">
+										<h5 class="entry-title">Triumphant Trumpet</h5>
+									</a>
+									<div class="datahead">
+										<span class="postaut">
+											by <a href="../author/Modo/index.html" rel="author">Modo</a> |
+										</span>
+										<a href="../category/music/index.html" rel="category tag">Music</a> |
+
+										<span class="postcommentscount">
+											0 comments: </span>
+									</div>
+								</header>
+
+								<div class="entry-content">
+									A trumpet is a musical instrument. It is the highest register in the brass
+									family. Trumpets are among the oldest musical instruments, dating back to at
+									least 1500 BC. They are played by blowing air through closed lips, producing
+									a &#8220;buzzing&#8221; sound that starts a standing wave vibration in...<a
+										href="../triumphant-trumpet/index.html">Continued</a> </div>
+
+							</div>
+							<div class="post_down">
+								<div class="post_share">
+
+									<a href="#" class="facebook"
+										data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": "'
+										title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="twitter"
+										data-social='{"type":"twitter", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet"}'
+										title="Triumphant Trumpet"><i class="fa fa-twitter"></i></a>
+									<a href="#" class="plusone"
+										data-social='{"type":"plusone", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet"}'
+										title="Triumphant Trumpet"><i class="fa fa-google-plus"></i></a>
+									<a href="#" class="pinterest"
+										data-social='{"type":"pinterest", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": ""}'
+										title="Triumphant Trumpet"><i class="fa fa-pinterest"></i></a>
+
+
+								</div>
+
+								<span class="postdate">25. Jun</span>
+							</div>
+						</div>
+					</article>
+				</div> -->
 			</template>
-			
+
 			<template id="category-list-template">
-				<li class="cat-item"><a href="index.html?cat_id={{this.cat_id}}">{{this.cat_name}}</a>
+				<li class="cat-item"><a href="{{this.cat_id}}">{{this.cat_name}}</a>
 			</template>
+
+		</div>
 </body>
 
 <script src="../data-js/articleApp.js" type="module"></script>
