@@ -12,7 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="shortcut icon" type="image/x-icon" href="../wp-content/uploads/2014/06/MODO-logo-favicon-black.png" />
 
-	<title>Blog Masonry &#8211; MODO</title>
+	<title>Articles</title>
 	<link rel='dns-prefetch' href='http://fonts.googleapis.com' />
 	<link rel='dns-prefetch' href='http://s.w.org' />
 	<link rel="alternate" type="application/rss+xml" title="MODO &raquo; Feed" href="../feed/index.rss" />
@@ -282,12 +282,15 @@
 			font-style: normal;
 			font-size: 32px;
 		}
-		/* .blogmasonry{
+		.blogmasonry{
 			display: flex;
 			flex-direction: row;
-			flex-wrap: 3;
-			
-		} */
+			flex-wrap: wrap;
+			height: 100vh;
+		}
+		.box{
+			width: 400px;
+		}
 
 		h1 {
 			font-family: Lato;
@@ -523,9 +526,38 @@
 										</div>
 									</div>
 								</div>
+<<<<<<< Updated upstream
 							</section>
 						</div><!-- sidebar -->
 					</aside><!-- aside -->
+=======
+							</div>
+						</div>
+					</div>
+
+					<div class="vc_toggle vc_toggle_simple vc_toggle_color_white  vc_toggle_size_md">
+						<div class="vc_toggle_title">
+							<h4>Product Categories</h4><i class="vc_toggle_icon"></i>
+						</div>
+						<div class="vc_toggle_content" id="category-item-viewport">
+							<ul class="product-categories"  >
+								
+							</ul>
+						</div>
+					</div>
+
+					<div class="container js-masonry"  data-masonry-options='{ "itemSelector": ".blogmasonry" }'>
+						 <div class="blogmasonry" id="article-item-viewport">
+								<ul class="products columns-3" >
+
+
+
+								</ul>
+						</div>
+							
+					</div>
+					<!-- end container -->
+>>>>>>> Stashed changes
 
 					<div class="main main col-lg-9 col-md-8 " id="article-item-viewport" role="main">
 
@@ -682,6 +714,7 @@
 				src='../wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min-ver=5.4.7.js'></script>
 
 			<template id="article-list-template">
+<<<<<<< Updated upstream
 					
                     <article
 					class="post-683 post type-post status-publish format-standard has-post-thumbnail hentry category-music">
@@ -701,6 +734,42 @@
 							</div>
 							<div class="datahead">
 								<span class="postaut"> <span class="postdate">{{this.article_created_at}}</span>
+=======
+					<article
+						class="post-683 box post type-post status-publish format-standard has-post-thumbnail hentry category-music">
+						<div class="post-content">
+							<section class="postmedia">
+								<div class="img_post"><a href="../wp-content/uploads/2014/06/truba.jpg"
+										class="image-popup-no-margins"><img
+											src="{{this.article_image}}"
+											title="Triumphant Trumpet" alt="truba" /></a></div>
+							</section>
+							<div class="data_wrap">
+								<header>
+									<a href="../item-detail/index.html">
+										<h5 class="entry-title">{{this.article_title}}</h5>
+									</a>
+									<div class="datahead">
+										<span class="postaut">
+											by <strong rel="author">Modo</strong> |
+										</span>
+									</div>
+								</header>
+
+								<div class="entry-content">{{this.article_description}}
+									<a href="../item-detail/index.html">Continued
+									</a> </div>
+
+							</div>
+							<div class="post_down">
+								<div class="post_share">
+									<a href="#" class="facebook"
+										data-social='{"type":"facebook", "url":"../triumphant-trumpet/index.html", "text": "Triumphant Trumpet", "image": "'
+										title="Triumphant Trumpet"><i class="fa fa-facebook"></i></a>
+								</div>
+
+								<span class="postdate">25. Jun</span>
+>>>>>>> Stashed changes
 							</div>
 						</header>
 
