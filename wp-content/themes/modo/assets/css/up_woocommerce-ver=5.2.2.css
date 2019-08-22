@@ -401,7 +401,7 @@
 .woocommerce ul.products,.woocommerce-page ul.products{clear:both;*zoom:1}
 .woocommerce ul.products:after,.woocommerce ul.products:before,.woocommerce-page ul.products:after,.woocommerce-page ul.products:before{content:" ";display:table}
 .woocommerce ul.products:after,.woocommerce-page ul.products:after{clear:both}
-.woocommerce ul.products li.product,.woocommerce-page ul.products li.product{float: left;margin: 0 3.5% 2em 0;padding: 0;position: relative;width: 31%;margin-left: 0;}
+.woocommerce ul.products li.product,.woocommerce-page ul.products li.product{float: left;margin: 0 3.5% 2em 0;padding: 0;position: relative;width: 28%;margin-left: 0;}
 .woocommerce ul.products li.first,.woocommerce-page ul.products li.first{clear:both}
 .woocommerce ul.products li.last,.woocommerce-page ul.products li.last{margin-right:0}
 .woocommerce-page.columns-1 ul.products li.product,.woocommerce.columns-1 ul.products li.product{width:100%;margin-right:0}
