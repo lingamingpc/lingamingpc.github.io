@@ -53,7 +53,7 @@ class ArticleController {
         const templates = [];
         for (let articleObj of Object.values(articleObjects)) {
             if(articleObj.cat_id == this.categoryID){
-                console.log(productObj.name)
+                // console.log(productObj.name)
                 templates.push(this.articleListView.getItemTemplate(articleObj));
             } else if(this.categoryID == 0){
                 templates.push(this.articleListView.getItemTemplate(articleObj));
