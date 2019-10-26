@@ -15,9 +15,21 @@ class ArticleListView{
                 .replace("{{this.article_description}}",reviewObj.article_description)
                 .replace("{{this.article_created_at}}",reviewObj.article_created_at)
                 .replace("{{this.cat_id}}",reviewObj.cat_id)
+                .replace("{{this.writer_name}}", reviewObj.writer_name)
 
                 .replace("{{para.cat_id}}", reviewObj.reveiw_id)
-                .replace("{{para.cat_name}}", reviewObj.review_title)   
+                .replace("{{para.cat_name}}", reviewObj.review_title)  
+                
+                .replace("{{n.article_id}}", reviewObj.aritcle_id)
+                .replace("{{n.article_title}}", reviewObj.article_title)
+                .replace("{{n.article_image}}", reviewObj.article_image)
+                .replace("{{n.article_description}}",reviewObj.article_description)
+                .replace("{{n.article_created_at}}",reviewObj.article_created_at)
+                .replace("{{n.cat_id}}",reviewObj.cat_id)
+                .replace("{{n.writer_name}}", reviewObj.writer_name)
+
+                .replace("{{n.cat_id}}", reviewObj.reveiw_id)
+                .replace("{{n.cat_name}}", reviewObj.review_title)  
         return result;
 
     }

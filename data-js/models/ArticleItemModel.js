@@ -7,7 +7,8 @@ class Article extends APIDataModel{
         article_image,
         article_description,
         article_created_at,
-        cat_id){
+        cat_id,
+        writer_name){
             super();
             this.article_id = article_id;
             this.article_title = article_title;
@@ -15,7 +16,7 @@ class Article extends APIDataModel{
             this.article_description = article_description;
             this.article_created_at = article_created_at;
             this.cat_id = cat_id;
-            console.log(this.article_created_at);
+            this.writer_name = writer_name;
         }
 
         // updateData(data){
