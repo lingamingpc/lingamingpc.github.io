@@ -16,5 +16,4 @@ class ArticleListModel extends APIDataModel{
     }
 
 }
-
 export default ArticleListModel;
