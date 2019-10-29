@@ -33,7 +33,6 @@ class ReviewListView{
     renderReviewList(templates){
         this.sviewport.innerHTML = "";
         for(let template of templates){
-            console.log(template)
             this.sviewport.innerHTML += template;
         }
     }

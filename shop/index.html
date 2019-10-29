@@ -478,7 +478,36 @@
 
 			<div id="content" class="container">
 				<div class="row">
+					<div style="width: 100%; ">
+						<div style="display: flex; justify-content: center; padding-left: 20px;">
+							<div class="tp-caption black   tp-resizeme" id="slide-7-layer-5"
+								data-x="['left','left','left','left']" data-hoffset="['154','154','154','151']"
+								data-y="['middle','middle','middle','middle']" data-voffset="['116','116','116','118']"
+								data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+								data-responsive_offset="on"
+								data-frames='[{"delay":1000,"speed":600,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":600,"frame":"999","to":"y:bottom;","ease":"nothing"}]'
+								data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+								data-paddingleft="[0,0,0,0]"
+								style="z-index: 9; white-space: nowrap; font-size: px; line-height: px; font-weight: 300; color: rgba(0,0,0,1); letter-spacing: px;font-family:Arial;">
+								<a class="slider-button white " title="new" href="index.html"><span>NEW</span></a>
+							</div>
+						<div class="tp-caption black   tp-resizeme" id="slide-8-layer-6"
+								style="margin-left: 50px;"
+								data-x="['left','left','left','left']" data-hoffset="['6','6','29','28']"
+								data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','111']"
+								data-width="none" data-height="none" data-whitespace="nowrap" data-type="text"
+								data-responsive_offset="on"
+								data-frames='[{"delay":1000,"speed":600,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":600,"frame":"999","to":"y:bottom;","ease":"nothing"}]'
+								data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+								data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+								data-paddingleft="[0,0,0,0]"
+								style="z-index: 10; white-space: nowrap; font-size: px; line-height: px; font-weight: 400; color: rgba(0,0,0,1); letter-spacing: ;font-family:Arial;">
+								<a class="slider-button " title="SEE MORE" href="#"><span>SECOND</span></a> </div>
+						</div>
+					</div>
 
+					</div>
 					<aside class="col-lg-3 col-md-4" role="complementary">
 						<div class="sidebar">
 							<section
@@ -528,7 +557,7 @@
 											<p>Email: lingamingpc@gmail.com</p>
 											<p>Phone: 09 45004 3858</p>
 											
-											<span class="shortcode_icon"><a href="#"
+											<span class="shortcode_icon"><a href="https://www.facebook.com/lingamingpc/"
 													style="color:#ccc;font-size:20px;"><i
 														class="fa fa-facebook"></i></a></span> <span
 												class="shortcode_icon"><a href="#" style="color:#ccc;font-size:20px;"><i
@@ -602,16 +631,15 @@
 				src='../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min-ver=5.4.7.js'></script>
 
 			<template id="product-list-template">
-
 				<li class="up-gallery-woo product ">
 					<a href="../product/item/index.html?lin_product_id={{para.lin_product_id}}&name={{para.name}}&normal_price={{para.normal_price}}&discount_price={{para.discount_price}}&specification={{para.specification}}&description={{para.description}}&image1={{para.image1}}&image2={{para.image2}}&image3={{para.image3}}&cat_id={{para.cat_id}}&brand_id={{para.brand_id}}"
 						class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
 						<span class="onsale">Sale!</span>
-						<img width="400" height="400" src="{{this.image1}}"
+						<img width="400" height="242" src="{{this.image1}}"
 							class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />
 						<h2 class="woocommerce-loop-product__title">{{this.name}}</h2>
 						<span class="price"><del><span class="woocommerce-Price-amount amount"><span
-										class="woocommerce-Price-currencySymbol">&pound;</span>{{this.normal_price}}</span></del>
+										class="woocommerce-Price-currencySymbol"></span></span></del>
 							<ins><span class="woocommerce-Price-amount amount"><span
 										class="woocommerce-Price-currencySymbol">&pound;</span>{{this.discount_price}}</span></ins></span>
 					</a>
@@ -621,7 +649,6 @@
 						to
 						cart</a> -->
 				</li>
-
 			</template>
 
 			<template id="category-list-template">
