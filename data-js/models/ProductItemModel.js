@@ -12,7 +12,8 @@ class Product extends APIDataModel{
         image2,
         image3,
         cat_id,
-        brand_id,){
+        brand_id,
+        type){
             super();
             this.lin_product_id = lin_product_id;
             this.name = name;
@@ -25,6 +26,7 @@ class Product extends APIDataModel{
             this.image3 = image3;
             this.cat_id = cat_id;
             this.brand_id = brand_id;
+            this.type = type;
         }
 
         // updateData(data){
