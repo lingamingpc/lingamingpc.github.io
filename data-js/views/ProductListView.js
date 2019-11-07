@@ -71,7 +71,7 @@ class ProductListView{
         .replace("{{para.used.image3}}", productObj.image3)
         .replace("{{para.used.cat_id}}", productObj.cat_id)
         .replace("{{para.used.brand_id}}", productObj.brand_id)
-        .replace("{{para.used.type}}", productObj.type
+        .replace("{{para.used.type}}", productObj.type)
 
         return result;
 
