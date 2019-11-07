@@ -4,8 +4,8 @@ class ProductListView{
         this.itemTemplate = document.getElementById("product-list-template").innerHTML;
         this.sviewport = document.getElementById("product-list-view-port");
 
-        this.usedItemTemplate = document.getElementById("product-used-list-template").innerHTML;
-        this.usedViewport = document.getElementById("product-used-list-view-port");
+        // this.usedItemTemplate = document.getElementById("product-used-list-template").innerHTML;
+        // this.usedViewport = document.getElementById("product-used-list-view-port");
     }
 
 
@@ -43,39 +43,39 @@ class ProductListView{
 
     }
 
-    getUsedItemTemplate(productObj){
-        const result = this.itemTemplate
-        .replace("{{this.used.lin_product_id}}", productObj.lin_product_id)
-        .replace("{{this.used.name}}", productObj.name)
-        .replace("{{this.used.normal_price}}", productObj.normal_price)
-        .replace("{{this.used.discount_price}}", productObj.discount_price)
-        .replace("{{this.used.specification}}", productObj.specification)
-        .replace("{{this.used.description}}", productObj.description)
-        .replace("{{this.used.product_name}}", productObj.product_name)
-        .replace("{{this.used.image1}}", productObj.image1)
-        .replace("{{this.used.image2}}", productObj.image2)
-        .replace("{{this.used.image3}}", productObj.image3)
-        .replace("{{this.used.cat_id}}", productObj.cat_id)
-        .replace("{{this.used.brand_id}}", productObj.brand_id)
-        .replace("{{this.used.type}}", productObj.type)
+    // getUsedItemTemplate(productObj){
+    //     const result = this.itemTemplate
+    //     .replace("{{this.used.lin_product_id}}", productObj.lin_product_id)
+    //     .replace("{{this.used.name}}", productObj.name)
+    //     .replace("{{this.used.normal_price}}", productObj.normal_price)
+    //     .replace("{{this.used.discount_price}}", productObj.discount_price)
+    //     .replace("{{this.used.specification}}", productObj.specification)
+    //     .replace("{{this.used.description}}", productObj.description)
+    //     .replace("{{this.used.product_name}}", productObj.product_name)
+    //     .replace("{{this.used.image1}}", productObj.image1)
+    //     .replace("{{this.used.image2}}", productObj.image2)
+    //     .replace("{{this.used.image3}}", productObj.image3)
+    //     .replace("{{this.used.cat_id}}", productObj.cat_id)
+    //     .replace("{{this.used.brand_id}}", productObj.brand_id)
+    //     .replace("{{this.used.type}}", productObj.type)
         
-        .replace("{{para.used.lin_product_id}}", productObj.lin_product_id)
-        .replace("{{para.used.name}}", productObj.name)
-        .replace("{{para.used.normal_price}}", productObj.normal_price)
-        .replace("{{para.used.discount_price}}", productObj.discount_price)
-        .replace("{{para.used.specification}}", productObj.specification)
-        .replace("{{para.used.description}}", productObj.description)
-        .replace("{{para.used.product_name}}", productObj.product_name)
-        .replace("{{para.used.image1}}", productObj.image1)
-        .replace("{{para.used.image2}}", productObj.image2)
-        .replace("{{para.used.image3}}", productObj.image3)
-        .replace("{{para.used.cat_id}}", productObj.cat_id)
-        .replace("{{para.used.brand_id}}", productObj.brand_id)
-        .replace("{{para.used.type}}", productObj.type)
+    //     .replace("{{para.used.lin_product_id}}", productObj.lin_product_id)
+    //     .replace("{{para.used.name}}", productObj.name)
+    //     .replace("{{para.used.normal_price}}", productObj.normal_price)
+    //     .replace("{{para.used.discount_price}}", productObj.discount_price)
+    //     .replace("{{para.used.specification}}", productObj.specification)
+    //     .replace("{{para.used.description}}", productObj.description)
+    //     .replace("{{para.used.product_name}}", productObj.product_name)
+    //     .replace("{{para.used.image1}}", productObj.image1)
+    //     .replace("{{para.used.image2}}", productObj.image2)
+    //     .replace("{{para.used.image3}}", productObj.image3)
+    //     .replace("{{para.used.cat_id}}", productObj.cat_id)
+    //     .replace("{{para.used.brand_id}}", productObj.brand_id)
+    //     .replace("{{para.used.type}}", productObj.type)
 
-        return result;
+    //     return result;
 
-    }
+    // }
 
 
     renderProductList(templates){
@@ -86,13 +86,13 @@ class ProductListView{
         }
     }
 
-    renderUsedProductList(templates){
-        this.usedViewport.innerHTML = "";
-        for(let template of templates){
-            console.log(template)
-            this.usedViewport.innerHTML += template;
-        }
-    }
+    // renderUsedProductList(templates){
+    //     this.usedViewport.innerHTML = "";
+    //     for(let template of templates){
+    //         console.log(template)
+    //         this.usedViewport.innerHTML += template;
+    //     }
+    // }
 
 }
 
