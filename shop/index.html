@@ -518,7 +518,14 @@
 				</div>
 
 				<div id="Paris" class="tabcontent">
-					<h1>Coming Soon</h1>
+					<div class="col-lg-12 " role="main">
+						<ul class="products" id="product-used-list-view-port">
+
+
+
+						</ul>
+
+					</div>
 				</div>
 
 
@@ -646,6 +653,27 @@
 									class="woocommerce-Price-currencySymbol"></span></span></del>
 						<ins><span class="woocommerce-Price-amount amount"><span
 									class="woocommerce-Price-currencySymbol">&pound;</span>{{this.discount_price}}</span></ins></span>
+				</a>
+				<!-- <a href="index-add-to-cart=70.html" data-quantity="1"
+						class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="70"
+						data-product_sku="" aria-label="Add &ldquo;Flying Ninja&rdquo; to your cart" rel="nofollow">Add
+						to
+						cart</a> -->
+			</li>
+		</template>
+
+		<template id="product-used-list-template">
+			<li class="up-gallery-woo product ">
+				<a href="../product/item/index.html?lin_product_id={{para.used.lin_product_id}}&name={{para.used.name}}&normal_price={{para.used.normal_price}}&discount_price={{para.used.discount_price}}&specification={{para.used.specification}}&description={{para.used.description}}&image1={{para.used.image1}}&image2={{para.used.image2}}&image3={{para.used.image3}}&cat_id={{para.used.cat_id}}&brand_id={{para.used.brand_id}}"
+					class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+					<span class="onsale">Sale!</span>
+					<img width="400" height="242" src="{{this.used.image1}}"
+						class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" />
+					<h2 class="woocommerce-loop-product__title">{{this.used.name}}</h2>
+					<span class="price"><del><span class="woocommerce-Price-amount amount"><span
+									class="woocommerce-Price-currencySymbol"></span></span></del>
+						<ins><span class="woocommerce-Price-amount amount"><span
+									class="woocommerce-Price-currencySymbol">&pound;</span>{{this.used.discount_price}}</span></ins></span>
 				</a>
 				<!-- <a href="index-add-to-cart=70.html" data-quantity="1"
 						class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="70"

@@ -11,7 +11,7 @@ import CategoryListView from '/data-js/views/CategoryListView.js';
 
 class Controller {
 
-    
+
 
     constructor() {
         // this.productItemModel = new ProductItemModel();
@@ -28,9 +28,10 @@ class Controller {
 
         this.productListModel.fetchAllProduct()
             .then((data) => {
-                
-                this.getAllProductData(data)
+
+                this.getAllProductData(data);
                 this.displayProductList(data);
+                this.displayUsedProductList(data);
 
             })
             .then((data) => {
@@ -48,19 +49,44 @@ class Controller {
 
     displayProductList(productObjects) {
         this.categoryID = this.getQueryVariable("cat_id");
-        console.log("categoryID"+this.categoryID);
+        console.log("newcategoryID" + this.categoryID);
         const templates = [];
         for (let productObj of productObjects) {
-            if(productObj.cat_id == this.categoryID){
-            
+            if (productObj.cat_id == this.categoryID) {
                 console.log(productObj.name)
-                templates.push(this.productListView.getItemTemplate(productObj));
-            } else if(this.categoryID == 0){
-                templates.push(this.productListView.getItemTemplate(productObj));
+                if (productObj.type == "new") {
+                    templates.push(this.productListView.getItemTemplate(productObj));
+                }
+            } else if (this.categoryID == 0) {
+                if (productObj.type == "new") {
+                    templates.push(this.productListView.getItemTemplate(productObj));
+                }
             }
         }
 
         this.productListView.renderProductList(templates);
+    }
+
+    displayUsedProductList(productObjects) {
+        this.categoryID = this.getQueryVariable("cat_id");
+        console.log("usedcategoryID" + this.categoryID);
+        const templates = [];
+        for (let productObj of productObjects) {
+            console.log("useproductcat" + productObj.cat_id);
+            if (productObj.cat_id == this.categoryID) {
+                if (productObj.type == "used") {
+                    console.log("usedcategoryID" + this.categoryID);
+                    templates.push(this.productListView.getItemTemplate(productObj));
+                }
+            } else if (this.categoryID == 0) {
+                if (productObj.type == "used") {
+                    console.log("usedcategoryID" + this.categoryID);
+                    templates.push(this.productListView.getItemTemplate(productObj));
+                }
+            }
+        }
+
+        this.productListView.renderUsedProductList(templates);
     }
 
     displayCategoryList(categoryObjects) {
@@ -111,22 +137,22 @@ class Controller {
     }
 
     makeSplit(someText) {
-		var temp = someText.replace(/%20/g, " ");
-		
-		return temp;
-	}
+        var temp = someText.replace(/%20/g, " ");
+
+        return temp;
+    }
 
     getQueryVariable(variable) {
-		var query = window.location.search.substring(1);
-		var vars = query.split("&");
-		for (var i = 0; i < vars.length; i++) {
-			var pair = vars[i].split("=");
-			if (pair[0] == variable) {
-				return pair[1];
-			}
-		}
-		return (false);
-	}
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
 
 }
 
